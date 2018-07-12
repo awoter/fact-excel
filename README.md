@@ -75,9 +75,11 @@ public class User {
  
 }
 
-
+@Controller
+@RequestMapping("/demo")
 public void DemoController{
-
+    
+    @RequestMapping("/export")
     public void exportExcel(HttpServletResponse response){
         
         List<User> userList = userService.selectSignaturePagingListByParam(userSearchParam);
